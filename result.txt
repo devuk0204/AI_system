@@ -1,0 +1,14 @@
+부전역 같은 경우 공식적인 환승역은 아니지만 동해선 부전역과 5분 거리에 있어
+승하차 하는사람이 많은 outlier임
+
+부산대역 -> 환승역 아닌데 평일 주말 할 것 없이 사람 많음
+
+dmlp 해볼것
+
+1. activation -> [relu, sigmoid]
+
+2. optimizer -> [Adam, SGD]
+
+3. learning_rate -> [0.001, 0.01, 0.1, 1]
+
+4. batch_size [64, 128, 256]
