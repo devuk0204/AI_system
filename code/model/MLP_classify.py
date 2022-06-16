@@ -26,9 +26,8 @@ test_scaled = (test_feature - mean) / std
 
 mlp = Sequential()
 
-activation_set = ['sigmoid', 'relu']
-batch_size_set = [32, 64]
-#batch_size_set = [128]
+#activation_set = ['sigmoid', 'relu']
+batch_size_set = [32, 64, 128]
 learning_rate_set = [0.001, 0.01, 0.1]
 result_set = []
 
@@ -71,8 +70,8 @@ mlp.add(Dense(30, activation = 'relu', input_shape = (30,), kernel_initializer =
 mlp.add(Dense(100, activation = 'relu', kernel_initializer = 'glorot_uniform', bias_initializer = 'zeros'))
 mlp.add(Dense(1, activation = 'sigmoid', kernel_initializer = 'glorot_uniform', bias_initializer = 'zeros'))
 
-mlp.compile(optimizer = optimizers.Adam(learning_rate = 0.001), loss = 'mean_squared_error', metrics=['accuracy'])
-hist = mlp.fit(train_scaled, train_target, batch_size = 64, epochs = 200, validation_data= (test_scaled, test_target), callbacks = [early_stopping])
+mlp.compile(optimizer = optimizers.Adam(learning_rate = 0.01), loss = 'mean_squared_error', metrics=['accuracy'])
+hist = mlp.fit(train_scaled, train_target, batch_size = 32, epochs = 200, validation_data= (test_scaled, test_target), callbacks = [early_stopping])
 plot('Adam')
 res = mlp.evaluate(test_scaled, test_target, verbose = 0)
 accuracy = round(res[1], 6)
@@ -82,24 +81,34 @@ print(f1_temp)
 #result_set.append([1, 1, 'Adam', 1,  accuracy, f1_temp])
 """
 
-for i in activation_set :
-    mlp.add(Dense(30, activation = i, input_shape = (30,), kernel_initializer = 'glorot_uniform', bias_initializer = 'zeros'))
-    mlp.add(Dense(100, activation = i, kernel_initializer = 'glorot_uniform', bias_initializer = 'zeros'))
-    mlp.add(Dense(1, activation = i, kernel_initializer = 'glorot_uniform', bias_initializer = 'zeros'))
-    
-    for j in learning_rate_set :
-        mlp.compile(optimizer = optimizers.Adam(learning_rate = j), loss = 'mean_squared_error', metrics=['accuracy'])
-        
-        for k in batch_size_set :
-            hist = mlp.fit(train_scaled, train_target, batch_size = k, epochs = 200, validation_data= (test_scaled, test_target), callbacks = [early_stopping])
-            plot()
-            res = mlp.evaluate(test_scaled, test_target, verbose = 0)
-            accuracy = res[1]
-            print(res)
-            f1_temp = f1_score()
-            result_set.append([i, j, 'Adam', k,  accuracy, f1_temp])
-            print(i, j, k)
+mlp.add(Dense(30, activation = 'sigmoid', input_shape = (30,), kernel_initializer = 'glorot_uniform', bias_initializer = 'zeros'))
+mlp.add(Dense(100, activation = 'sigmoid', kernel_initializer = 'glorot_uniform', bias_initializer = 'zeros'))
+mlp.add(Dense(1, activation = 'sigmoid', kernel_initializer = 'glorot_uniform', bias_initializer = 'zeros'))
+mlp.compile(optimizer = optimizers.Adam(learning_rate = 0.01), loss = 'mean_squared_error', metrics=['accuracy'])
+hist = mlp.fit(train_scaled, train_target, batch_size = 32, epochs = 200, validation_data= (test_scaled, test_target), callbacks = [early_stopping])
+plot()
+res = mlp.evaluate(test_scaled, test_target, verbose = 0)
+accuracy = res[1]
+print(res)
+f1_temp = f1_score()
+result_set.append(['sigmoid', 1, 'Adam', 1,  accuracy, f1_temp])
+
 """
+for j in learning_rate_set :
+    mlp.compile(optimizer = optimizers.Adam(learning_rate = j), loss = 'mean_squared_error', metrics=['accuracy'])
+    
+    for k in batch_size_set :
+        hist = mlp.fit(train_scaled, train_target, batch_size = k, epochs = 200, validation_data= (test_scaled, test_target), callbacks = [early_stopping])
+        plot()
+        res = mlp.evaluate(test_scaled, test_target, verbose = 0)
+        accuracy = res[1]
+        print(res)
+        f1_temp = f1_score()
+        result_set.append(['sigmoid_relu', j, 'Adam', k,  accuracy, f1_temp])
+        print(j, k)
+
+    
+
 for i in activation_set :
     mlp.add(Dense(30, activation = i, input_shape = (30,), kernel_initializer = 'glorot_uniform', bias_initializer = 'zeros'))
     mlp.add(Dense(100, activation = i, kernel_initializer = 'glorot_uniform', bias_initializer = 'zeros'))

@@ -8,7 +8,11 @@ dmlp 해볼것
 1. activation -> [relu, sigmoid]
 
 2. optimizer -> [Adam, SGD]
+	SGD일때 loss는 변하지만 정확도가 안변함
 
 3. learning_rate -> [0.001, 0.01, 0.1, 1]
 
 4. batch_size [64, 128, 256]
+
+stratify = target -> 데이터셋 전체의 클래스 비율을 고려하여 데이터셋을 분할
+			train과 test의 클래스 비율이 전체와 동일
