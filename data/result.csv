@@ -1,0 +1,163 @@
+activation,learning_rate,optimizer,batch_size,accuracy,f1_score
+sigmoid,0.001,Adam,64,0.8975074291229248,"                      precision    recall  f1-score   support
+
+not_transfer_station       0.90      0.99      0.94      4656
+    transfer_station       0.82      0.30      0.44       720
+
+            accuracy                           0.90      5376
+           macro avg       0.86      0.65      0.69      5376
+        weighted avg       0.89      0.90      0.88      5376
+"
+sigmoid,0.001,Adam,128,0.8963913917541504,"                      precision    recall  f1-score   support
+
+not_transfer_station       0.90      0.99      0.94      4656
+    transfer_station       0.77      0.32      0.45       720
+
+            accuracy                           0.90      5376
+           macro avg       0.84      0.65      0.70      5376
+        weighted avg       0.89      0.90      0.88      5376
+"
+sigmoid,0.001,Adam,256,0.8969494104385376,"                      precision    recall  f1-score   support
+
+not_transfer_station       0.90      0.99      0.94      4656
+    transfer_station       0.87      0.27      0.41       720
+
+            accuracy                           0.90      5376
+           macro avg       0.88      0.63      0.68      5376
+        weighted avg       0.89      0.90      0.87      5376
+"
+sigmoid,0.01,Adam,64,0.9665178656578064,"                      precision    recall  f1-score   support
+
+not_transfer_station       0.97      1.00      0.98      4656
+    transfer_station       0.96      0.78      0.86       720
+
+            accuracy                           0.97      5376
+           macro avg       0.97      0.89      0.92      5376
+        weighted avg       0.97      0.97      0.96      5376
+"
+sigmoid,0.01,Adam,128,0.9704241156578064,"                      precision    recall  f1-score   support
+
+not_transfer_station       0.98      0.99      0.98      4656
+    transfer_station       0.93      0.84      0.88       720
+
+            accuracy                           0.97      5376
+           macro avg       0.95      0.92      0.93      5376
+        weighted avg       0.97      0.97      0.97      5376
+"
+sigmoid,0.01,Adam,256,0.972284197807312,"                      precision    recall  f1-score   support
+
+not_transfer_station       0.98      0.99      0.98      4656
+    transfer_station       0.94      0.84      0.89       720
+
+            accuracy                           0.97      5376
+           macro avg       0.96      0.92      0.94      5376
+        weighted avg       0.97      0.97      0.97      5376
+"
+sigmoid,0.1,Adam,64,0.8660714030265808,"                      precision    recall  f1-score   support
+
+not_transfer_station       0.87      1.00      0.93      4656
+    transfer_station       0.00      0.00      0.00       720
+
+            accuracy                           0.87      5376
+           macro avg       0.43      0.50      0.46      5376
+        weighted avg       0.75      0.87      0.80      5376
+"
+sigmoid,0.1,Adam,128,0.8660714030265808,"                      precision    recall  f1-score   support
+
+not_transfer_station       0.87      1.00      0.93      4656
+    transfer_station       0.00      0.00      0.00       720
+
+            accuracy                           0.87      5376
+           macro avg       0.43      0.50      0.46      5376
+        weighted avg       0.75      0.87      0.80      5376
+"
+sigmoid,0.1,Adam,256,0.8660714030265808,"                      precision    recall  f1-score   support
+
+not_transfer_station       0.87      1.00      0.93      4656
+    transfer_station       0.00      0.00      0.00       720
+
+            accuracy                           0.87      5376
+           macro avg       0.43      0.50      0.46      5376
+        weighted avg       0.75      0.87      0.80      5376
+"
+relu,0.001,Adam,64,0.8660714030265808,"                      precision    recall  f1-score   support
+
+not_transfer_station       0.87      1.00      0.93      4656
+    transfer_station       0.00      0.00      0.00       720
+
+            accuracy                           0.87      5376
+           macro avg       0.43      0.50      0.46      5376
+        weighted avg       0.75      0.87      0.80      5376
+"
+relu,0.001,Adam,128,0.8660714030265808,"                      precision    recall  f1-score   support
+
+not_transfer_station       0.87      1.00      0.93      4656
+    transfer_station       0.00      0.00      0.00       720
+
+            accuracy                           0.87      5376
+           macro avg       0.43      0.50      0.46      5376
+        weighted avg       0.75      0.87      0.80      5376
+"
+relu,0.001,Adam,256,0.8660714030265808,"                      precision    recall  f1-score   support
+
+not_transfer_station       0.87      1.00      0.93      4656
+    transfer_station       0.00      0.00      0.00       720
+
+            accuracy                           0.87      5376
+           macro avg       0.43      0.50      0.46      5376
+        weighted avg       0.75      0.87      0.80      5376
+"
+relu,0.01,Adam,64,0.8660714030265808,"                      precision    recall  f1-score   support
+
+not_transfer_station       0.87      1.00      0.93      4656
+    transfer_station       0.00      0.00      0.00       720
+
+            accuracy                           0.87      5376
+           macro avg       0.43      0.50      0.46      5376
+        weighted avg       0.75      0.87      0.80      5376
+"
+relu,0.01,Adam,128,0.8660714030265808,"                      precision    recall  f1-score   support
+
+not_transfer_station       0.87      1.00      0.93      4656
+    transfer_station       0.00      0.00      0.00       720
+
+            accuracy                           0.87      5376
+           macro avg       0.43      0.50      0.46      5376
+        weighted avg       0.75      0.87      0.80      5376
+"
+relu,0.01,Adam,256,0.8660714030265808,"                      precision    recall  f1-score   support
+
+not_transfer_station       0.87      1.00      0.93      4656
+    transfer_station       0.00      0.00      0.00       720
+
+            accuracy                           0.87      5376
+           macro avg       0.43      0.50      0.46      5376
+        weighted avg       0.75      0.87      0.80      5376
+"
+relu,0.1,Adam,64,0.8660714030265808,"                      precision    recall  f1-score   support
+
+not_transfer_station       0.87      1.00      0.93      4656
+    transfer_station       0.00      0.00      0.00       720
+
+            accuracy                           0.87      5376
+           macro avg       0.43      0.50      0.46      5376
+        weighted avg       0.75      0.87      0.80      5376
+"
+relu,0.1,Adam,128,0.8660714030265808,"                      precision    recall  f1-score   support
+
+not_transfer_station       0.87      1.00      0.93      4656
+    transfer_station       0.00      0.00      0.00       720
+
+            accuracy                           0.87      5376
+           macro avg       0.43      0.50      0.46      5376
+        weighted avg       0.75      0.87      0.80      5376
+"
+relu,0.1,Adam,256,0.8660714030265808,"                      precision    recall  f1-score   support
+
+not_transfer_station       0.87      1.00      0.93      4656
+    transfer_station       0.00      0.00      0.00       720
+
+            accuracy                           0.87      5376
+           macro avg       0.43      0.50      0.46      5376
+        weighted avg       0.75      0.87      0.80      5376
+"

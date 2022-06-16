@@ -6,8 +6,8 @@ import pandas as pd
 
 subway = pd.read_csv('/home/devuk/code/AI_system/data/feature_target.csv')
 
-feature = subway.iloc[:, :29].to_numpy()
-target = subway.iloc[:, 29].to_numpy()
+feature = subway.iloc[:, :30].to_numpy()
+target = subway.iloc[:, 30].to_numpy()
 
 
 train_feature, test_feature, train_target, test_target = train_test_split(feature, target, 

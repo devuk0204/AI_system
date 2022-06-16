@@ -9,8 +9,8 @@ subway = pd.read_csv('/home/devuk/code/AI_system/data/feature_target.csv')
 accuracy_set = []
 
 #feature, target extract
-feature = subway.iloc[:, :29].values.tolist()
-target = subway.iloc[:, 29].values.tolist()
+feature = subway.iloc[:, :30].values.tolist()
+target = subway.iloc[:, 30].values.tolist()
 
 train_feature, test_feature, train_target, test_target = train_test_split(feature, target, 
                                                                           random_state = 40, shuffle = True, train_size = 0.7)
